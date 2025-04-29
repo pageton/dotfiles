@@ -1,0 +1,28 @@
+
+## Keybinds
+keybind = global:cmd+e=toggle_quick_terminal
+
+## Window
+window-decoration = true
+mouse-hide-while-typing = false
+window-padding-x = 0
+window-padding-y = 0
+macos-window-shadow = false
+macos-titlebar-style = transparent
+
+## Clipboard
+clipboard-read = "allow"
+clipboard-paste-protection = false
+
+## Background
+background-opacity = 0.95
+
+## Theme
+theme = tokyonight-storm
+font-family = Menlo
+font-size = 15
+
+adjust-cell-width = 0
+adjust-cell-height = 20%
+
+auto-update = check
