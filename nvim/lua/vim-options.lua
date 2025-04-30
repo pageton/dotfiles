@@ -5,6 +5,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.cursorline = true
 vim.opt.clipboard = "unnamedplus"
+vim.opt.guifont = "FiraCode Nerd Font:h14"
 vim.wo.number = true
 vim.cmd.colorscheme = "catppuccin"
 vim.g.mapleader = " "
