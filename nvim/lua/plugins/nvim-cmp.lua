@@ -6,7 +6,6 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
-
       {
         "L3MON4D3/LuaSnip",
         version = "v2.*",
@@ -21,12 +20,17 @@ return {
       local luasnip = require("luasnip")
       local lspkind = require("lspkind")
 
+      lspkind.init({
+        symbol_map = {
+          Supermaven = "",
+        },
+      })
+
+      vim.api.nvim_set_hl(0, "CmpItemKindSupermaven", { fg = "#6CC644" })
+
       require("luasnip.loaders.from_vscode").lazy_load()
 
       cmp.setup({
-        completion = {
-          completeopt = "menu,menuone,preview,noselect",
-        },
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)
@@ -46,29 +50,39 @@ return {
           { name = "luasnip" },
           { name = "buffer" },
           { name = "path" },
+          { name = "supermaven" },
         }),
         formatting = {
           format = lspkind.cmp_format({
+            mode = "symbol",
             maxwidth = 50,
+            symbol_map = { Supermaven = "" },
             ellipsis_char = "...",
           }),
         },
-      })
-
-      cmp.setup.cmdline(":", {
-        sources = {
-          { name = "cmdline" },
-          { name = "buffer" },
+        completion = {
+          completeopt = "menu,menuone,preview,noselect",
         },
       })
 
+      -- Command-line setup
+      cmp.setup.cmdline(":", {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+          { name = "cmdline" },
+          { name = "buffer" },
+        }),
+      })
+
       cmp.setup.cmdline("/", {
+        mapping = cmp.mapping.preset.cmdline(),
         sources = {
           { name = "buffer" },
         },
       })
 
       cmp.setup.cmdline("!", {
+        mapping = cmp.mapping.preset.cmdline(),
         sources = {
           { name = "path" },
         },
