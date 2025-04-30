@@ -33,7 +33,6 @@ return {
 				"graphql",
 				"prismals",
 				"biome",
-				"pyright",
 				"pylsp",
 			},
 		})
@@ -42,7 +41,6 @@ return {
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
-				"eslint_d",
 				"biome",
 				"ruff",
 			},
