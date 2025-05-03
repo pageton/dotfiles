@@ -7,7 +7,7 @@ vim.opt.cursorline = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.guifont = "FiraCode Nerd Font:h14"
 vim.wo.number = true
-vim.cmd.colorscheme = "catppuccin"
+vim.cmd.colorscheme = "tokyonight"
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>W", ":w<CR>")
