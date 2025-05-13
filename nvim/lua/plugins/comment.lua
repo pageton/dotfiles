@@ -45,7 +45,7 @@ return {
 				---Function to call after (un)comment
 				post_hook = nil,
 			})
-			vim.keymap.set({ "n", "v", "i" }, "<C-=>", function()
+			vim.keymap.set({ "n", "v", "i" }, "<C-\\>", function()
 				require("Comment.api").toggle.linewise.current()
 			end, { noremap = true, silent = true })
 		end,
