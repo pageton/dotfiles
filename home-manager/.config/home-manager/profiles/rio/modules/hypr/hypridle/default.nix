@@ -7,7 +7,7 @@
       general = {
         lock_cmd = "hyprlock";
         unlock_cmd = "notify-send '🔓 Unlocked!'";
-        before_sleep_cmd = "hyprlock";
+        # before_sleep_cmd = "hyprlock";
         after_sleep_cmd = "notify-send '🛌 Awake!'";
         ignore_dbus_inhibit = false;
         ignore_systemd_inhibit = false;
