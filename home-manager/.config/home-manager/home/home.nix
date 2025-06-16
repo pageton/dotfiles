@@ -69,6 +69,9 @@
       bun
       lua-language-server
       gopls
+      golines
+      goimports-reviser
+      gofumpt
       zsh-powerlevel10k
       bibata-cursors
     ])
