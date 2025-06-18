@@ -76,13 +76,12 @@
       bibata-cursors
     ])
     ++ (with pkgs; [
-      cargo
       gcc
       go
       nodejs
       python311
       python311Packages.pip
-      rustc
+      rustup
     ]);
 
   fonts.fontconfig.enable = true;
