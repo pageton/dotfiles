@@ -14,13 +14,11 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" ];
+      plugins = [ "git" "sudo" ];
+      custom = builtins.toString ./custom_omz_dir;
+      theme = "oxide";
     };
 
-    initContent = ''
-      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-      [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-    '';
   };
 
 }

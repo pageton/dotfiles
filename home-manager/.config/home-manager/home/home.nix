@@ -2,12 +2,12 @@
 
 {
   imports = [
-    ./modules/terminal/zsh
-    ./modules/terminal/kitty
-    ./modules/hypr/hyprland
-    ./modules/hypr/hyprlock
-    ./modules/hypr/hypridle
-    ./modules/hypr/hyprpaper
+    ./modules/zsh
+    ./modules/kitty
+    ./modules/hyprland
+    ./modules/hyprlock
+    ./modules/hypridle
+    ./modules/hyprpaper
     ./modules/waybar
     ./modules/wlogout
     ./modules/dunst
